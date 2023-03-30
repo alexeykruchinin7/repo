@@ -1,13 +1,17 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Task4 {
 
     public static void main(String[] args) {
         try
         {
-            File file = new File("input.txt");
+            Scanner in = new Scanner(System.in);
+            String filename = in.next();
+
+            File file = new File(filename);
             FileReader fr = new FileReader(file);
             BufferedReader reader = new BufferedReader(fr);
 
