@@ -1,12 +1,17 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Task2 {
     public static void main(String[] args) {
         try
         {
-            File file1 = new File("file1.txt");
+            Scanner in = new Scanner(System.in);
+            String filename_1 = in.next();
+            String filename_2 = in.next();
+
+            File file1 = new File(filename_1);
             FileReader fr1 = new FileReader(file1);
             BufferedReader reader1 = new BufferedReader(fr1);
 
@@ -14,7 +19,7 @@ public class Task2 {
             int x = Integer.parseInt(line1[0]), y = Integer.parseInt(line1[1]), r = Integer.parseInt(reader1.readLine());
 
             
-            File file2 = new File("file2.txt");
+            File file2 = new File(filename_2);
             FileReader fr2 = new FileReader(file2);
             BufferedReader reader2 = new BufferedReader(fr2);
 
